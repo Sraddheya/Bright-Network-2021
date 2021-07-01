@@ -134,7 +134,7 @@ class VideoPlayer:
         if playlist_index>=0:
             if video_id in self._playlist_list[playlist_index].video_ids:
                 print("Cannot add video to " + playlist_name + ": Video already added")
-            if video_id not in self.list_of_all_video_ids():
+            elif video_id not in self.list_of_all_video_ids():
                 print("Cannot add video to " + playlist_name + ": Video does not exist")
             else:
                 self._playlist_list[playlist_index].video_ids.append(video_id)
